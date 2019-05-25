@@ -43,7 +43,7 @@ def GenerateInjectSGRule(IPList):
                 "DependsOn": groupId,
                 "Properties": {
                     "GroupId": {"Fn::GetAtt": [groupId, "GroupId"]},
-                    "IpProtocol": "tcp", "FromPort": "0",
+                    "IpProtocol": "tcp", "FromPort": "{}".format(port),
                     "ToPort": "{}".format(port),
                     cidrKey: ip
                 }}
@@ -105,7 +105,6 @@ def main(argv):
         exit(1)
 
     # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html
-
 
     tempObj = {}
     tempObj = GenerateInjectSGRule(iplist)
