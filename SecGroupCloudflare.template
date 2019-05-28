@@ -20,7 +20,7 @@
             "GroupId"
           ]
         }, 
-        "FromPort": "0"
+        "FromPort": "80"
       }, 
       "DependsOn": "SGGenerated80"
     }, 
@@ -36,7 +36,7 @@
             "GroupId"
           ]
         }, 
-        "FromPort": "0"
+        "FromPort": "80"
       }, 
       "DependsOn": "SGGenerated80"
     }, 
@@ -52,7 +52,7 @@
             "GroupId"
           ]
         }, 
-        "FromPort": "0"
+        "FromPort": "443"
       }, 
       "DependsOn": "SGGenerated443"
     }, 
@@ -68,7 +68,7 @@
             "GroupId"
           ]
         }, 
-        "FromPort": "0"
+        "FromPort": "443"
       }, 
       "DependsOn": "SGGenerated443"
     }, 
@@ -84,7 +84,7 @@
             "GroupId"
           ]
         }, 
-        "FromPort": "0"
+        "FromPort": "80"
       }, 
       "DependsOn": "SGGenerated80"
     }, 
@@ -120,7 +120,7 @@
             "GroupId"
           ]
         }, 
-        "FromPort": "0"
+        "FromPort": "443"
       }, 
       "DependsOn": "SGGenerated443"
     }, 
@@ -136,7 +136,7 @@
             "GroupId"
           ]
         }, 
-        "FromPort": "0"
+        "FromPort": "80"
       }, 
       "DependsOn": "SGGenerated80"
     }, 
@@ -152,7 +152,7 @@
             "GroupId"
           ]
         }, 
-        "FromPort": "0"
+        "FromPort": "80"
       }, 
       "DependsOn": "SGGenerated80"
     }, 
@@ -168,7 +168,7 @@
             "GroupId"
           ]
         }, 
-        "FromPort": "0"
+        "FromPort": "80"
       }, 
       "DependsOn": "SGGenerated80"
     }, 
@@ -184,7 +184,7 @@
             "GroupId"
           ]
         }, 
-        "FromPort": "0"
+        "FromPort": "443"
       }, 
       "DependsOn": "SGGenerated443"
     }, 
@@ -200,7 +200,7 @@
             "GroupId"
           ]
         }, 
-        "FromPort": "0"
+        "FromPort": "443"
       }, 
       "DependsOn": "SGGenerated443"
     }, 
@@ -216,7 +216,7 @@
             "GroupId"
           ]
         }, 
-        "FromPort": "0"
+        "FromPort": "443"
       }, 
       "DependsOn": "SGGenerated443"
     }, 
@@ -232,7 +232,7 @@
             "GroupId"
           ]
         }, 
-        "FromPort": "0"
+        "FromPort": "80"
       }, 
       "DependsOn": "SGGenerated80"
     }, 
@@ -248,7 +248,7 @@
             "GroupId"
           ]
         }, 
-        "FromPort": "0"
+        "FromPort": "80"
       }, 
       "DependsOn": "SGGenerated80"
     }, 
@@ -264,7 +264,7 @@
             "GroupId"
           ]
         }, 
-        "FromPort": "0"
+        "FromPort": "443"
       }, 
       "DependsOn": "SGGenerated443"
     }, 
@@ -280,7 +280,7 @@
             "GroupId"
           ]
         }, 
-        "FromPort": "0"
+        "FromPort": "443"
       }, 
       "DependsOn": "SGGenerated443"
     }, 
@@ -296,7 +296,7 @@
             "GroupId"
           ]
         }, 
-        "FromPort": "0"
+        "FromPort": "443"
       }, 
       "DependsOn": "SGGenerated443"
     }, 
@@ -312,7 +312,7 @@
             "GroupId"
           ]
         }, 
-        "FromPort": "0"
+        "FromPort": "443"
       }, 
       "DependsOn": "SGGenerated443"
     }, 
@@ -328,7 +328,7 @@
             "GroupId"
           ]
         }, 
-        "FromPort": "0"
+        "FromPort": "80"
       }, 
       "DependsOn": "SGGenerated80"
     }, 
@@ -344,7 +344,7 @@
             "GroupId"
           ]
         }, 
-        "FromPort": "0"
+        "FromPort": "80"
       }, 
       "DependsOn": "SGGenerated80"
     }, 
@@ -360,7 +360,7 @@
             "GroupId"
           ]
         }, 
-        "FromPort": "0"
+        "FromPort": "443"
       }, 
       "DependsOn": "SGGenerated443"
     }, 
@@ -376,7 +376,7 @@
             "GroupId"
           ]
         }, 
-        "FromPort": "0"
+        "FromPort": "80"
       }, 
       "DependsOn": "SGGenerated80"
     }, 
@@ -392,7 +392,7 @@
             "GroupId"
           ]
         }, 
-        "FromPort": "0"
+        "FromPort": "80"
       }, 
       "DependsOn": "SGGenerated80"
     }, 
@@ -408,7 +408,7 @@
             "GroupId"
           ]
         }, 
-        "FromPort": "0"
+        "FromPort": "80"
       }, 
       "DependsOn": "SGGenerated80"
     }, 
@@ -424,7 +424,7 @@
             "GroupId"
           ]
         }, 
-        "FromPort": "0"
+        "FromPort": "80"
       }, 
       "DependsOn": "SGGenerated80"
     }, 
@@ -440,7 +440,7 @@
             "GroupId"
           ]
         }, 
-        "FromPort": "0"
+        "FromPort": "80"
       }, 
       "DependsOn": "SGGenerated80"
     }, 
@@ -456,7 +456,7 @@
             "GroupId"
           ]
         }, 
-        "FromPort": "0"
+        "FromPort": "80"
       }, 
       "DependsOn": "SGGenerated80"
     }, 
@@ -472,7 +472,7 @@
             "GroupId"
           ]
         }, 
-        "FromPort": "0"
+        "FromPort": "80"
       }, 
       "DependsOn": "SGGenerated80"
     }, 
@@ -488,7 +488,7 @@
             "GroupId"
           ]
         }, 
-        "FromPort": "0"
+        "FromPort": "80"
       }, 
       "DependsOn": "SGGenerated80"
     }, 
@@ -504,7 +504,7 @@
             "GroupId"
           ]
         }, 
-        "FromPort": "0"
+        "FromPort": "80"
       }, 
       "DependsOn": "SGGenerated80"
     }, 
@@ -520,7 +520,7 @@
             "GroupId"
           ]
         }, 
-        "FromPort": "0"
+        "FromPort": "80"
       }, 
       "DependsOn": "SGGenerated80"
     }, 
@@ -536,7 +536,7 @@
             "GroupId"
           ]
         }, 
-        "FromPort": "0"
+        "FromPort": "443"
       }, 
       "DependsOn": "SGGenerated443"
     }, 
@@ -552,7 +552,7 @@
             "GroupId"
           ]
         }, 
-        "FromPort": "0"
+        "FromPort": "443"
       }, 
       "DependsOn": "SGGenerated443"
     }, 
@@ -568,7 +568,7 @@
             "GroupId"
           ]
         }, 
-        "FromPort": "0"
+        "FromPort": "443"
       }, 
       "DependsOn": "SGGenerated443"
     }, 
@@ -584,7 +584,7 @@
             "GroupId"
           ]
         }, 
-        "FromPort": "0"
+        "FromPort": "80"
       }, 
       "DependsOn": "SGGenerated80"
     }, 
@@ -600,7 +600,7 @@
             "GroupId"
           ]
         }, 
-        "FromPort": "0"
+        "FromPort": "443"
       }, 
       "DependsOn": "SGGenerated443"
     }, 
@@ -616,7 +616,7 @@
             "GroupId"
           ]
         }, 
-        "FromPort": "0"
+        "FromPort": "443"
       }, 
       "DependsOn": "SGGenerated443"
     }, 
@@ -632,7 +632,7 @@
             "GroupId"
           ]
         }, 
-        "FromPort": "0"
+        "FromPort": "443"
       }, 
       "DependsOn": "SGGenerated443"
     }, 
@@ -648,7 +648,7 @@
             "GroupId"
           ]
         }, 
-        "FromPort": "0"
+        "FromPort": "443"
       }, 
       "DependsOn": "SGGenerated443"
     }, 
@@ -664,7 +664,7 @@
             "GroupId"
           ]
         }, 
-        "FromPort": "0"
+        "FromPort": "443"
       }, 
       "DependsOn": "SGGenerated443"
     }, 
@@ -680,7 +680,7 @@
             "GroupId"
           ]
         }, 
-        "FromPort": "0"
+        "FromPort": "443"
       }, 
       "DependsOn": "SGGenerated443"
     }, 
@@ -696,9 +696,17 @@
             "GroupId"
           ]
         }, 
-        "FromPort": "0"
+        "FromPort": "443"
       }, 
       "DependsOn": "SGGenerated443"
     }
+  }, 
+  "Metadata": {
+    "Feed Source": "CloudFlare", 
+    "BuiltOn": "2019-05-28T10:28:35.600478", 
+    "Author": "janhert", 
+    "Feed Checksum": "227e465a1db261a2bd00366dc7d6f3be", 
+    "Version": "1", 
+    "Feed Size": 21
   }
 }

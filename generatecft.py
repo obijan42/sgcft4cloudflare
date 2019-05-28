@@ -7,6 +7,8 @@ import os
 import platform
 import requests
 import sys
+import hashlib
+import datetime
 
 # Uncomment to enable low level debugging
 logging.basicConfig(level=logging.DEBUG)
@@ -106,11 +108,25 @@ def main(argv):
 
     # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html
 
+    feedHash = hashlib.md5(str(iplist)).hexdigest()
+    feedLen = len(iplist)
+
+    logging.info("Info Hash: {} , {} items ".format(feedHash, feedLen))
+
     tempObj = {}
     tempObj = GenerateInjectSGRule(iplist)
 
     if (tempObj):
         templateObj['Resources'].update(tempObj)
+
+    templateObj["Metadata"] = ({
+        "Author": os.environ.get('USER', os.environ.get('USERNAME', 'Unknown')),
+        "Version": "1",
+        "BuiltOn": datetime.datetime.now().isoformat(),
+        "Feed Source" : "CloudFlare",
+        "Feed Size" : feedLen,
+        "Feed Checksum" : feedHash
+    })
 
     # logging.debug(json.dumps(templateObj, indent=4))
     if (templateObj):
