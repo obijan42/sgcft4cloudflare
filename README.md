@@ -3,7 +3,7 @@ Generator of CloudFormation Template that creates security groups for whitelisti
 
 ## What?
 
-Creates a CloudFromtion Template based on the currently published list of public IP adresses. 
+Creates a CloudFormation Template based on the currently published list of public IP addresses. 
 This will create 2 "Security Groups" which allows ingress from these IPs.  Each security group supports 1 port:
 - Port 80
 - Port 443  
@@ -30,7 +30,7 @@ The template contains extra information that allows you to determine the version
 The checksum will allow you to verify that the feed has remained unchanged.
 
 
-```
+```json
   "Metadata": {
     "Feed Source": "CloudFlare", 
     "BuiltOn": "2019-05-28T10:28:35.600478", 
@@ -60,7 +60,7 @@ This system allows one to easily provide full protection to your resources, whil
 ### Benefits of this approach
 - No code running in the account.  
 - No egress requirement for pulling in a feed inside the account
-- The Cloudformation can be managed centrally and made part of a CI/CD pipeline.
+- The CloudFormation can be managed centrally and made part of a CI/CD pipeline.
 - Security groups area part of critical security infrastructure and should be tightly "change controlled". 
 This solution allows governance of every change.
 - Decouple the generation of the infrastructure and it's execution.  Only the later needs IAM access.
