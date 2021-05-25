@@ -75,3 +75,6 @@ This solution allows governance of every change.
 - Re-run script on a regular basis
 - Use "Update stack" to control changes
 
+## Bonus! 
+As a free bonus, the script also generates a default S3 Bucketpolicy that will allowlist the same IPs.
+It can be copy-pasted if you want to use your bucket as a source for the CDN. 

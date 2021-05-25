@@ -1,712 +1,744 @@
 {
-  "AWSTemplateFormatVersion": "2010-09-09", 
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Resources": {
+    "SGGenerated80": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupName": "CloudFlareIngress80",
+        "GroupDescription": "Allow access from CloudFlare IP to port 80",
+        "VpcId": {
+          "Ref": "vpc"
+        }
+      }
+    },
+    "SGGenerated80Rule1": {
+      "Type": "AWS::EC2::SecurityGroupIngress",
+      "DependsOn": "SGGenerated80",
+      "Properties": {
+        "GroupId": {
+          "Fn::GetAtt": [
+            "SGGenerated80",
+            "GroupId"
+          ]
+        },
+        "IpProtocol": "tcp",
+        "FromPort": "80",
+        "ToPort": "80",
+        "CidrIp": "103.21.244.0/22"
+      }
+    },
+    "SGGenerated80Rule2": {
+      "Type": "AWS::EC2::SecurityGroupIngress",
+      "DependsOn": "SGGenerated80",
+      "Properties": {
+        "GroupId": {
+          "Fn::GetAtt": [
+            "SGGenerated80",
+            "GroupId"
+          ]
+        },
+        "IpProtocol": "tcp",
+        "FromPort": "80",
+        "ToPort": "80",
+        "CidrIp": "103.22.200.0/22"
+      }
+    },
+    "SGGenerated80Rule3": {
+      "Type": "AWS::EC2::SecurityGroupIngress",
+      "DependsOn": "SGGenerated80",
+      "Properties": {
+        "GroupId": {
+          "Fn::GetAtt": [
+            "SGGenerated80",
+            "GroupId"
+          ]
+        },
+        "IpProtocol": "tcp",
+        "FromPort": "80",
+        "ToPort": "80",
+        "CidrIp": "103.31.4.0/22"
+      }
+    },
+    "SGGenerated80Rule4": {
+      "Type": "AWS::EC2::SecurityGroupIngress",
+      "DependsOn": "SGGenerated80",
+      "Properties": {
+        "GroupId": {
+          "Fn::GetAtt": [
+            "SGGenerated80",
+            "GroupId"
+          ]
+        },
+        "IpProtocol": "tcp",
+        "FromPort": "80",
+        "ToPort": "80",
+        "CidrIp": "104.16.0.0/13"
+      }
+    },
+    "SGGenerated80Rule5": {
+      "Type": "AWS::EC2::SecurityGroupIngress",
+      "DependsOn": "SGGenerated80",
+      "Properties": {
+        "GroupId": {
+          "Fn::GetAtt": [
+            "SGGenerated80",
+            "GroupId"
+          ]
+        },
+        "IpProtocol": "tcp",
+        "FromPort": "80",
+        "ToPort": "80",
+        "CidrIp": "104.24.0.0/14"
+      }
+    },
+    "SGGenerated80Rule6": {
+      "Type": "AWS::EC2::SecurityGroupIngress",
+      "DependsOn": "SGGenerated80",
+      "Properties": {
+        "GroupId": {
+          "Fn::GetAtt": [
+            "SGGenerated80",
+            "GroupId"
+          ]
+        },
+        "IpProtocol": "tcp",
+        "FromPort": "80",
+        "ToPort": "80",
+        "CidrIp": "108.162.192.0/18"
+      }
+    },
+    "SGGenerated80Rule7": {
+      "Type": "AWS::EC2::SecurityGroupIngress",
+      "DependsOn": "SGGenerated80",
+      "Properties": {
+        "GroupId": {
+          "Fn::GetAtt": [
+            "SGGenerated80",
+            "GroupId"
+          ]
+        },
+        "IpProtocol": "tcp",
+        "FromPort": "80",
+        "ToPort": "80",
+        "CidrIp": "131.0.72.0/22"
+      }
+    },
+    "SGGenerated80Rule8": {
+      "Type": "AWS::EC2::SecurityGroupIngress",
+      "DependsOn": "SGGenerated80",
+      "Properties": {
+        "GroupId": {
+          "Fn::GetAtt": [
+            "SGGenerated80",
+            "GroupId"
+          ]
+        },
+        "IpProtocol": "tcp",
+        "FromPort": "80",
+        "ToPort": "80",
+        "CidrIp": "141.101.64.0/18"
+      }
+    },
+    "SGGenerated80Rule9": {
+      "Type": "AWS::EC2::SecurityGroupIngress",
+      "DependsOn": "SGGenerated80",
+      "Properties": {
+        "GroupId": {
+          "Fn::GetAtt": [
+            "SGGenerated80",
+            "GroupId"
+          ]
+        },
+        "IpProtocol": "tcp",
+        "FromPort": "80",
+        "ToPort": "80",
+        "CidrIp": "162.158.0.0/15"
+      }
+    },
+    "SGGenerated80Rule10": {
+      "Type": "AWS::EC2::SecurityGroupIngress",
+      "DependsOn": "SGGenerated80",
+      "Properties": {
+        "GroupId": {
+          "Fn::GetAtt": [
+            "SGGenerated80",
+            "GroupId"
+          ]
+        },
+        "IpProtocol": "tcp",
+        "FromPort": "80",
+        "ToPort": "80",
+        "CidrIp": "172.64.0.0/13"
+      }
+    },
+    "SGGenerated80Rule11": {
+      "Type": "AWS::EC2::SecurityGroupIngress",
+      "DependsOn": "SGGenerated80",
+      "Properties": {
+        "GroupId": {
+          "Fn::GetAtt": [
+            "SGGenerated80",
+            "GroupId"
+          ]
+        },
+        "IpProtocol": "tcp",
+        "FromPort": "80",
+        "ToPort": "80",
+        "CidrIp": "173.245.48.0/20"
+      }
+    },
+    "SGGenerated80Rule12": {
+      "Type": "AWS::EC2::SecurityGroupIngress",
+      "DependsOn": "SGGenerated80",
+      "Properties": {
+        "GroupId": {
+          "Fn::GetAtt": [
+            "SGGenerated80",
+            "GroupId"
+          ]
+        },
+        "IpProtocol": "tcp",
+        "FromPort": "80",
+        "ToPort": "80",
+        "CidrIp": "188.114.96.0/20"
+      }
+    },
+    "SGGenerated80Rule13": {
+      "Type": "AWS::EC2::SecurityGroupIngress",
+      "DependsOn": "SGGenerated80",
+      "Properties": {
+        "GroupId": {
+          "Fn::GetAtt": [
+            "SGGenerated80",
+            "GroupId"
+          ]
+        },
+        "IpProtocol": "tcp",
+        "FromPort": "80",
+        "ToPort": "80",
+        "CidrIp": "190.93.240.0/20"
+      }
+    },
+    "SGGenerated80Rule14": {
+      "Type": "AWS::EC2::SecurityGroupIngress",
+      "DependsOn": "SGGenerated80",
+      "Properties": {
+        "GroupId": {
+          "Fn::GetAtt": [
+            "SGGenerated80",
+            "GroupId"
+          ]
+        },
+        "IpProtocol": "tcp",
+        "FromPort": "80",
+        "ToPort": "80",
+        "CidrIp": "197.234.240.0/22"
+      }
+    },
+    "SGGenerated80Rule15": {
+      "Type": "AWS::EC2::SecurityGroupIngress",
+      "DependsOn": "SGGenerated80",
+      "Properties": {
+        "GroupId": {
+          "Fn::GetAtt": [
+            "SGGenerated80",
+            "GroupId"
+          ]
+        },
+        "IpProtocol": "tcp",
+        "FromPort": "80",
+        "ToPort": "80",
+        "CidrIp": "198.41.128.0/17"
+      }
+    },
+    "SGGenerated80Rule16": {
+      "Type": "AWS::EC2::SecurityGroupIngress",
+      "DependsOn": "SGGenerated80",
+      "Properties": {
+        "GroupId": {
+          "Fn::GetAtt": [
+            "SGGenerated80",
+            "GroupId"
+          ]
+        },
+        "IpProtocol": "tcp",
+        "FromPort": "80",
+        "ToPort": "80",
+        "CidrIpv6": "2400:cb00::/32"
+      }
+    },
+    "SGGenerated80Rule17": {
+      "Type": "AWS::EC2::SecurityGroupIngress",
+      "DependsOn": "SGGenerated80",
+      "Properties": {
+        "GroupId": {
+          "Fn::GetAtt": [
+            "SGGenerated80",
+            "GroupId"
+          ]
+        },
+        "IpProtocol": "tcp",
+        "FromPort": "80",
+        "ToPort": "80",
+        "CidrIpv6": "2405:8100::/32"
+      }
+    },
+    "SGGenerated80Rule18": {
+      "Type": "AWS::EC2::SecurityGroupIngress",
+      "DependsOn": "SGGenerated80",
+      "Properties": {
+        "GroupId": {
+          "Fn::GetAtt": [
+            "SGGenerated80",
+            "GroupId"
+          ]
+        },
+        "IpProtocol": "tcp",
+        "FromPort": "80",
+        "ToPort": "80",
+        "CidrIpv6": "2405:b500::/32"
+      }
+    },
+    "SGGenerated80Rule19": {
+      "Type": "AWS::EC2::SecurityGroupIngress",
+      "DependsOn": "SGGenerated80",
+      "Properties": {
+        "GroupId": {
+          "Fn::GetAtt": [
+            "SGGenerated80",
+            "GroupId"
+          ]
+        },
+        "IpProtocol": "tcp",
+        "FromPort": "80",
+        "ToPort": "80",
+        "CidrIpv6": "2606:4700::/32"
+      }
+    },
+    "SGGenerated80Rule20": {
+      "Type": "AWS::EC2::SecurityGroupIngress",
+      "DependsOn": "SGGenerated80",
+      "Properties": {
+        "GroupId": {
+          "Fn::GetAtt": [
+            "SGGenerated80",
+            "GroupId"
+          ]
+        },
+        "IpProtocol": "tcp",
+        "FromPort": "80",
+        "ToPort": "80",
+        "CidrIpv6": "2803:f800::/32"
+      }
+    },
+    "SGGenerated80Rule21": {
+      "Type": "AWS::EC2::SecurityGroupIngress",
+      "DependsOn": "SGGenerated80",
+      "Properties": {
+        "GroupId": {
+          "Fn::GetAtt": [
+            "SGGenerated80",
+            "GroupId"
+          ]
+        },
+        "IpProtocol": "tcp",
+        "FromPort": "80",
+        "ToPort": "80",
+        "CidrIpv6": "2a06:98c0::/29"
+      }
+    },
+    "SGGenerated80Rule22": {
+      "Type": "AWS::EC2::SecurityGroupIngress",
+      "DependsOn": "SGGenerated80",
+      "Properties": {
+        "GroupId": {
+          "Fn::GetAtt": [
+            "SGGenerated80",
+            "GroupId"
+          ]
+        },
+        "IpProtocol": "tcp",
+        "FromPort": "80",
+        "ToPort": "80",
+        "CidrIpv6": "2c0f:f248::/32"
+      }
+    },
+    "SGGenerated443": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "Properties": {
+        "GroupName": "CloudFlareIngress443",
+        "GroupDescription": "Allow access from CloudFlare IP to port 443",
+        "VpcId": {
+          "Ref": "vpc"
+        }
+      }
+    },
+    "SGGenerated443Rule1": {
+      "Type": "AWS::EC2::SecurityGroupIngress",
+      "DependsOn": "SGGenerated443",
+      "Properties": {
+        "GroupId": {
+          "Fn::GetAtt": [
+            "SGGenerated443",
+            "GroupId"
+          ]
+        },
+        "IpProtocol": "tcp",
+        "FromPort": "443",
+        "ToPort": "443",
+        "CidrIp": "103.21.244.0/22"
+      }
+    },
+    "SGGenerated443Rule2": {
+      "Type": "AWS::EC2::SecurityGroupIngress",
+      "DependsOn": "SGGenerated443",
+      "Properties": {
+        "GroupId": {
+          "Fn::GetAtt": [
+            "SGGenerated443",
+            "GroupId"
+          ]
+        },
+        "IpProtocol": "tcp",
+        "FromPort": "443",
+        "ToPort": "443",
+        "CidrIp": "103.22.200.0/22"
+      }
+    },
+    "SGGenerated443Rule3": {
+      "Type": "AWS::EC2::SecurityGroupIngress",
+      "DependsOn": "SGGenerated443",
+      "Properties": {
+        "GroupId": {
+          "Fn::GetAtt": [
+            "SGGenerated443",
+            "GroupId"
+          ]
+        },
+        "IpProtocol": "tcp",
+        "FromPort": "443",
+        "ToPort": "443",
+        "CidrIp": "103.31.4.0/22"
+      }
+    },
+    "SGGenerated443Rule4": {
+      "Type": "AWS::EC2::SecurityGroupIngress",
+      "DependsOn": "SGGenerated443",
+      "Properties": {
+        "GroupId": {
+          "Fn::GetAtt": [
+            "SGGenerated443",
+            "GroupId"
+          ]
+        },
+        "IpProtocol": "tcp",
+        "FromPort": "443",
+        "ToPort": "443",
+        "CidrIp": "104.16.0.0/13"
+      }
+    },
+    "SGGenerated443Rule5": {
+      "Type": "AWS::EC2::SecurityGroupIngress",
+      "DependsOn": "SGGenerated443",
+      "Properties": {
+        "GroupId": {
+          "Fn::GetAtt": [
+            "SGGenerated443",
+            "GroupId"
+          ]
+        },
+        "IpProtocol": "tcp",
+        "FromPort": "443",
+        "ToPort": "443",
+        "CidrIp": "104.24.0.0/14"
+      }
+    },
+    "SGGenerated443Rule6": {
+      "Type": "AWS::EC2::SecurityGroupIngress",
+      "DependsOn": "SGGenerated443",
+      "Properties": {
+        "GroupId": {
+          "Fn::GetAtt": [
+            "SGGenerated443",
+            "GroupId"
+          ]
+        },
+        "IpProtocol": "tcp",
+        "FromPort": "443",
+        "ToPort": "443",
+        "CidrIp": "108.162.192.0/18"
+      }
+    },
+    "SGGenerated443Rule7": {
+      "Type": "AWS::EC2::SecurityGroupIngress",
+      "DependsOn": "SGGenerated443",
+      "Properties": {
+        "GroupId": {
+          "Fn::GetAtt": [
+            "SGGenerated443",
+            "GroupId"
+          ]
+        },
+        "IpProtocol": "tcp",
+        "FromPort": "443",
+        "ToPort": "443",
+        "CidrIp": "131.0.72.0/22"
+      }
+    },
+    "SGGenerated443Rule8": {
+      "Type": "AWS::EC2::SecurityGroupIngress",
+      "DependsOn": "SGGenerated443",
+      "Properties": {
+        "GroupId": {
+          "Fn::GetAtt": [
+            "SGGenerated443",
+            "GroupId"
+          ]
+        },
+        "IpProtocol": "tcp",
+        "FromPort": "443",
+        "ToPort": "443",
+        "CidrIp": "141.101.64.0/18"
+      }
+    },
+    "SGGenerated443Rule9": {
+      "Type": "AWS::EC2::SecurityGroupIngress",
+      "DependsOn": "SGGenerated443",
+      "Properties": {
+        "GroupId": {
+          "Fn::GetAtt": [
+            "SGGenerated443",
+            "GroupId"
+          ]
+        },
+        "IpProtocol": "tcp",
+        "FromPort": "443",
+        "ToPort": "443",
+        "CidrIp": "162.158.0.0/15"
+      }
+    },
+    "SGGenerated443Rule10": {
+      "Type": "AWS::EC2::SecurityGroupIngress",
+      "DependsOn": "SGGenerated443",
+      "Properties": {
+        "GroupId": {
+          "Fn::GetAtt": [
+            "SGGenerated443",
+            "GroupId"
+          ]
+        },
+        "IpProtocol": "tcp",
+        "FromPort": "443",
+        "ToPort": "443",
+        "CidrIp": "172.64.0.0/13"
+      }
+    },
+    "SGGenerated443Rule11": {
+      "Type": "AWS::EC2::SecurityGroupIngress",
+      "DependsOn": "SGGenerated443",
+      "Properties": {
+        "GroupId": {
+          "Fn::GetAtt": [
+            "SGGenerated443",
+            "GroupId"
+          ]
+        },
+        "IpProtocol": "tcp",
+        "FromPort": "443",
+        "ToPort": "443",
+        "CidrIp": "173.245.48.0/20"
+      }
+    },
+    "SGGenerated443Rule12": {
+      "Type": "AWS::EC2::SecurityGroupIngress",
+      "DependsOn": "SGGenerated443",
+      "Properties": {
+        "GroupId": {
+          "Fn::GetAtt": [
+            "SGGenerated443",
+            "GroupId"
+          ]
+        },
+        "IpProtocol": "tcp",
+        "FromPort": "443",
+        "ToPort": "443",
+        "CidrIp": "188.114.96.0/20"
+      }
+    },
+    "SGGenerated443Rule13": {
+      "Type": "AWS::EC2::SecurityGroupIngress",
+      "DependsOn": "SGGenerated443",
+      "Properties": {
+        "GroupId": {
+          "Fn::GetAtt": [
+            "SGGenerated443",
+            "GroupId"
+          ]
+        },
+        "IpProtocol": "tcp",
+        "FromPort": "443",
+        "ToPort": "443",
+        "CidrIp": "190.93.240.0/20"
+      }
+    },
+    "SGGenerated443Rule14": {
+      "Type": "AWS::EC2::SecurityGroupIngress",
+      "DependsOn": "SGGenerated443",
+      "Properties": {
+        "GroupId": {
+          "Fn::GetAtt": [
+            "SGGenerated443",
+            "GroupId"
+          ]
+        },
+        "IpProtocol": "tcp",
+        "FromPort": "443",
+        "ToPort": "443",
+        "CidrIp": "197.234.240.0/22"
+      }
+    },
+    "SGGenerated443Rule15": {
+      "Type": "AWS::EC2::SecurityGroupIngress",
+      "DependsOn": "SGGenerated443",
+      "Properties": {
+        "GroupId": {
+          "Fn::GetAtt": [
+            "SGGenerated443",
+            "GroupId"
+          ]
+        },
+        "IpProtocol": "tcp",
+        "FromPort": "443",
+        "ToPort": "443",
+        "CidrIp": "198.41.128.0/17"
+      }
+    },
+    "SGGenerated443Rule16": {
+      "Type": "AWS::EC2::SecurityGroupIngress",
+      "DependsOn": "SGGenerated443",
+      "Properties": {
+        "GroupId": {
+          "Fn::GetAtt": [
+            "SGGenerated443",
+            "GroupId"
+          ]
+        },
+        "IpProtocol": "tcp",
+        "FromPort": "443",
+        "ToPort": "443",
+        "CidrIpv6": "2400:cb00::/32"
+      }
+    },
+    "SGGenerated443Rule17": {
+      "Type": "AWS::EC2::SecurityGroupIngress",
+      "DependsOn": "SGGenerated443",
+      "Properties": {
+        "GroupId": {
+          "Fn::GetAtt": [
+            "SGGenerated443",
+            "GroupId"
+          ]
+        },
+        "IpProtocol": "tcp",
+        "FromPort": "443",
+        "ToPort": "443",
+        "CidrIpv6": "2405:8100::/32"
+      }
+    },
+    "SGGenerated443Rule18": {
+      "Type": "AWS::EC2::SecurityGroupIngress",
+      "DependsOn": "SGGenerated443",
+      "Properties": {
+        "GroupId": {
+          "Fn::GetAtt": [
+            "SGGenerated443",
+            "GroupId"
+          ]
+        },
+        "IpProtocol": "tcp",
+        "FromPort": "443",
+        "ToPort": "443",
+        "CidrIpv6": "2405:b500::/32"
+      }
+    },
+    "SGGenerated443Rule19": {
+      "Type": "AWS::EC2::SecurityGroupIngress",
+      "DependsOn": "SGGenerated443",
+      "Properties": {
+        "GroupId": {
+          "Fn::GetAtt": [
+            "SGGenerated443",
+            "GroupId"
+          ]
+        },
+        "IpProtocol": "tcp",
+        "FromPort": "443",
+        "ToPort": "443",
+        "CidrIpv6": "2606:4700::/32"
+      }
+    },
+    "SGGenerated443Rule20": {
+      "Type": "AWS::EC2::SecurityGroupIngress",
+      "DependsOn": "SGGenerated443",
+      "Properties": {
+        "GroupId": {
+          "Fn::GetAtt": [
+            "SGGenerated443",
+            "GroupId"
+          ]
+        },
+        "IpProtocol": "tcp",
+        "FromPort": "443",
+        "ToPort": "443",
+        "CidrIpv6": "2803:f800::/32"
+      }
+    },
+    "SGGenerated443Rule21": {
+      "Type": "AWS::EC2::SecurityGroupIngress",
+      "DependsOn": "SGGenerated443",
+      "Properties": {
+        "GroupId": {
+          "Fn::GetAtt": [
+            "SGGenerated443",
+            "GroupId"
+          ]
+        },
+        "IpProtocol": "tcp",
+        "FromPort": "443",
+        "ToPort": "443",
+        "CidrIpv6": "2a06:98c0::/29"
+      }
+    },
+    "SGGenerated443Rule22": {
+      "Type": "AWS::EC2::SecurityGroupIngress",
+      "DependsOn": "SGGenerated443",
+      "Properties": {
+        "GroupId": {
+          "Fn::GetAtt": [
+            "SGGenerated443",
+            "GroupId"
+          ]
+        },
+        "IpProtocol": "tcp",
+        "FromPort": "443",
+        "ToPort": "443",
+        "CidrIpv6": "2c0f:f248::/32"
+      }
+    }
+  },
+  "Description": "Security groups for whitelisting CloudFlare",
   "Parameters": {
     "vpc": {
-      "Type": "AWS::EC2::VPC::Id", 
+      "Type": "AWS::EC2::VPC::Id",
       "Description": "VPC of the application"
     }
-  }, 
-  "Description": "Security groups for whitelisting CloudFlare", 
-  "Resources": {
-    "SGGenerated80Rule14": {
-      "Type": "AWS::EC2::SecurityGroupIngress", 
-      "Properties": {
-        "ToPort": "80", 
-        "IpProtocol": "tcp", 
-        "CidrIp": "198.41.128.0/17", 
-        "GroupId": {
-          "Fn::GetAtt": [
-            "SGGenerated80", 
-            "GroupId"
-          ]
-        }, 
-        "FromPort": "80"
-      }, 
-      "DependsOn": "SGGenerated80"
-    }, 
-    "SGGenerated80Rule1": {
-      "Type": "AWS::EC2::SecurityGroupIngress", 
-      "Properties": {
-        "ToPort": "80", 
-        "IpProtocol": "tcp", 
-        "CidrIp": "103.21.244.0/22", 
-        "GroupId": {
-          "Fn::GetAtt": [
-            "SGGenerated80", 
-            "GroupId"
-          ]
-        }, 
-        "FromPort": "80"
-      }, 
-      "DependsOn": "SGGenerated80"
-    }, 
-    "SGGenerated443Rule20": {
-      "Type": "AWS::EC2::SecurityGroupIngress", 
-      "Properties": {
-        "ToPort": "443", 
-        "IpProtocol": "tcp", 
-        "CidrIpv6": "2a06:98c0::/29", 
-        "GroupId": {
-          "Fn::GetAtt": [
-            "SGGenerated443", 
-            "GroupId"
-          ]
-        }, 
-        "FromPort": "443"
-      }, 
-      "DependsOn": "SGGenerated443"
-    }, 
-    "SGGenerated443Rule21": {
-      "Type": "AWS::EC2::SecurityGroupIngress", 
-      "Properties": {
-        "ToPort": "443", 
-        "IpProtocol": "tcp", 
-        "CidrIpv6": "2c0f:f248::/32", 
-        "GroupId": {
-          "Fn::GetAtt": [
-            "SGGenerated443", 
-            "GroupId"
-          ]
-        }, 
-        "FromPort": "443"
-      }, 
-      "DependsOn": "SGGenerated443"
-    }, 
-    "SGGenerated80Rule12": {
-      "Type": "AWS::EC2::SecurityGroupIngress", 
-      "Properties": {
-        "ToPort": "80", 
-        "IpProtocol": "tcp", 
-        "CidrIp": "190.93.240.0/20", 
-        "GroupId": {
-          "Fn::GetAtt": [
-            "SGGenerated80", 
-            "GroupId"
-          ]
-        }, 
-        "FromPort": "80"
-      }, 
-      "DependsOn": "SGGenerated80"
-    }, 
-    "SGGenerated80": {
-      "Type": "AWS::EC2::SecurityGroup", 
-      "Properties": {
-        "GroupName": "CloudFlareIngress80", 
-        "VpcId": {
-          "Ref": "vpc"
-        }, 
-        "GroupDescription": "Allow access from CloudFlare IP to port 80"
-      }
-    }, 
-    "SGGenerated443": {
-      "Type": "AWS::EC2::SecurityGroup", 
-      "Properties": {
-        "GroupName": "CloudFlareIngress443", 
-        "VpcId": {
-          "Ref": "vpc"
-        }, 
-        "GroupDescription": "Allow access from CloudFlare IP to port 443"
-      }
-    }, 
-    "SGGenerated443Rule6": {
-      "Type": "AWS::EC2::SecurityGroupIngress", 
-      "Properties": {
-        "ToPort": "443", 
-        "IpProtocol": "tcp", 
-        "CidrIp": "131.0.72.0/22", 
-        "GroupId": {
-          "Fn::GetAtt": [
-            "SGGenerated443", 
-            "GroupId"
-          ]
-        }, 
-        "FromPort": "443"
-      }, 
-      "DependsOn": "SGGenerated443"
-    }, 
-    "SGGenerated80Rule20": {
-      "Type": "AWS::EC2::SecurityGroupIngress", 
-      "Properties": {
-        "ToPort": "80", 
-        "IpProtocol": "tcp", 
-        "CidrIpv6": "2a06:98c0::/29", 
-        "GroupId": {
-          "Fn::GetAtt": [
-            "SGGenerated80", 
-            "GroupId"
-          ]
-        }, 
-        "FromPort": "80"
-      }, 
-      "DependsOn": "SGGenerated80"
-    }, 
-    "SGGenerated80Rule21": {
-      "Type": "AWS::EC2::SecurityGroupIngress", 
-      "Properties": {
-        "ToPort": "80", 
-        "IpProtocol": "tcp", 
-        "CidrIpv6": "2c0f:f248::/32", 
-        "GroupId": {
-          "Fn::GetAtt": [
-            "SGGenerated80", 
-            "GroupId"
-          ]
-        }, 
-        "FromPort": "80"
-      }, 
-      "DependsOn": "SGGenerated80"
-    }, 
-    "SGGenerated80Rule7": {
-      "Type": "AWS::EC2::SecurityGroupIngress", 
-      "Properties": {
-        "ToPort": "80", 
-        "IpProtocol": "tcp", 
-        "CidrIp": "141.101.64.0/18", 
-        "GroupId": {
-          "Fn::GetAtt": [
-            "SGGenerated80", 
-            "GroupId"
-          ]
-        }, 
-        "FromPort": "80"
-      }, 
-      "DependsOn": "SGGenerated80"
-    }, 
-    "SGGenerated443Rule10": {
-      "Type": "AWS::EC2::SecurityGroupIngress", 
-      "Properties": {
-        "ToPort": "443", 
-        "IpProtocol": "tcp", 
-        "CidrIp": "173.245.48.0/20", 
-        "GroupId": {
-          "Fn::GetAtt": [
-            "SGGenerated443", 
-            "GroupId"
-          ]
-        }, 
-        "FromPort": "443"
-      }, 
-      "DependsOn": "SGGenerated443"
-    }, 
-    "SGGenerated443Rule13": {
-      "Type": "AWS::EC2::SecurityGroupIngress", 
-      "Properties": {
-        "ToPort": "443", 
-        "IpProtocol": "tcp", 
-        "CidrIp": "197.234.240.0/22", 
-        "GroupId": {
-          "Fn::GetAtt": [
-            "SGGenerated443", 
-            "GroupId"
-          ]
-        }, 
-        "FromPort": "443"
-      }, 
-      "DependsOn": "SGGenerated443"
-    }, 
-    "SGGenerated443Rule12": {
-      "Type": "AWS::EC2::SecurityGroupIngress", 
-      "Properties": {
-        "ToPort": "443", 
-        "IpProtocol": "tcp", 
-        "CidrIp": "190.93.240.0/20", 
-        "GroupId": {
-          "Fn::GetAtt": [
-            "SGGenerated443", 
-            "GroupId"
-          ]
-        }, 
-        "FromPort": "443"
-      }, 
-      "DependsOn": "SGGenerated443"
-    }, 
-    "SGGenerated80Rule3": {
-      "Type": "AWS::EC2::SecurityGroupIngress", 
-      "Properties": {
-        "ToPort": "80", 
-        "IpProtocol": "tcp", 
-        "CidrIp": "103.31.4.0/22", 
-        "GroupId": {
-          "Fn::GetAtt": [
-            "SGGenerated80", 
-            "GroupId"
-          ]
-        }, 
-        "FromPort": "80"
-      }, 
-      "DependsOn": "SGGenerated80"
-    }, 
-    "SGGenerated80Rule2": {
-      "Type": "AWS::EC2::SecurityGroupIngress", 
-      "Properties": {
-        "ToPort": "80", 
-        "IpProtocol": "tcp", 
-        "CidrIp": "103.22.200.0/22", 
-        "GroupId": {
-          "Fn::GetAtt": [
-            "SGGenerated80", 
-            "GroupId"
-          ]
-        }, 
-        "FromPort": "80"
-      }, 
-      "DependsOn": "SGGenerated80"
-    }, 
-    "SGGenerated443Rule17": {
-      "Type": "AWS::EC2::SecurityGroupIngress", 
-      "Properties": {
-        "ToPort": "443", 
-        "IpProtocol": "tcp", 
-        "CidrIpv6": "2405:b500::/32", 
-        "GroupId": {
-          "Fn::GetAtt": [
-            "SGGenerated443", 
-            "GroupId"
-          ]
-        }, 
-        "FromPort": "443"
-      }, 
-      "DependsOn": "SGGenerated443"
-    }, 
-    "SGGenerated443Rule16": {
-      "Type": "AWS::EC2::SecurityGroupIngress", 
-      "Properties": {
-        "ToPort": "443", 
-        "IpProtocol": "tcp", 
-        "CidrIpv6": "2405:8100::/32", 
-        "GroupId": {
-          "Fn::GetAtt": [
-            "SGGenerated443", 
-            "GroupId"
-          ]
-        }, 
-        "FromPort": "443"
-      }, 
-      "DependsOn": "SGGenerated443"
-    }, 
-    "SGGenerated443Rule19": {
-      "Type": "AWS::EC2::SecurityGroupIngress", 
-      "Properties": {
-        "ToPort": "443", 
-        "IpProtocol": "tcp", 
-        "CidrIpv6": "2803:f800::/32", 
-        "GroupId": {
-          "Fn::GetAtt": [
-            "SGGenerated443", 
-            "GroupId"
-          ]
-        }, 
-        "FromPort": "443"
-      }, 
-      "DependsOn": "SGGenerated443"
-    }, 
-    "SGGenerated443Rule18": {
-      "Type": "AWS::EC2::SecurityGroupIngress", 
-      "Properties": {
-        "ToPort": "443", 
-        "IpProtocol": "tcp", 
-        "CidrIpv6": "2606:4700::/32", 
-        "GroupId": {
-          "Fn::GetAtt": [
-            "SGGenerated443", 
-            "GroupId"
-          ]
-        }, 
-        "FromPort": "443"
-      }, 
-      "DependsOn": "SGGenerated443"
-    }, 
-    "SGGenerated80Rule9": {
-      "Type": "AWS::EC2::SecurityGroupIngress", 
-      "Properties": {
-        "ToPort": "80", 
-        "IpProtocol": "tcp", 
-        "CidrIp": "172.64.0.0/13", 
-        "GroupId": {
-          "Fn::GetAtt": [
-            "SGGenerated80", 
-            "GroupId"
-          ]
-        }, 
-        "FromPort": "80"
-      }, 
-      "DependsOn": "SGGenerated80"
-    }, 
-    "SGGenerated80Rule8": {
-      "Type": "AWS::EC2::SecurityGroupIngress", 
-      "Properties": {
-        "ToPort": "80", 
-        "IpProtocol": "tcp", 
-        "CidrIp": "162.158.0.0/15", 
-        "GroupId": {
-          "Fn::GetAtt": [
-            "SGGenerated80", 
-            "GroupId"
-          ]
-        }, 
-        "FromPort": "80"
-      }, 
-      "DependsOn": "SGGenerated80"
-    }, 
-    "SGGenerated443Rule11": {
-      "Type": "AWS::EC2::SecurityGroupIngress", 
-      "Properties": {
-        "ToPort": "443", 
-        "IpProtocol": "tcp", 
-        "CidrIp": "188.114.96.0/20", 
-        "GroupId": {
-          "Fn::GetAtt": [
-            "SGGenerated443", 
-            "GroupId"
-          ]
-        }, 
-        "FromPort": "443"
-      }, 
-      "DependsOn": "SGGenerated443"
-    }, 
-    "SGGenerated80Rule19": {
-      "Type": "AWS::EC2::SecurityGroupIngress", 
-      "Properties": {
-        "ToPort": "80", 
-        "IpProtocol": "tcp", 
-        "CidrIpv6": "2803:f800::/32", 
-        "GroupId": {
-          "Fn::GetAtt": [
-            "SGGenerated80", 
-            "GroupId"
-          ]
-        }, 
-        "FromPort": "80"
-      }, 
-      "DependsOn": "SGGenerated80"
-    }, 
-    "SGGenerated80Rule6": {
-      "Type": "AWS::EC2::SecurityGroupIngress", 
-      "Properties": {
-        "ToPort": "80", 
-        "IpProtocol": "tcp", 
-        "CidrIp": "131.0.72.0/22", 
-        "GroupId": {
-          "Fn::GetAtt": [
-            "SGGenerated80", 
-            "GroupId"
-          ]
-        }, 
-        "FromPort": "80"
-      }, 
-      "DependsOn": "SGGenerated80"
-    }, 
-    "SGGenerated80Rule17": {
-      "Type": "AWS::EC2::SecurityGroupIngress", 
-      "Properties": {
-        "ToPort": "80", 
-        "IpProtocol": "tcp", 
-        "CidrIpv6": "2405:b500::/32", 
-        "GroupId": {
-          "Fn::GetAtt": [
-            "SGGenerated80", 
-            "GroupId"
-          ]
-        }, 
-        "FromPort": "80"
-      }, 
-      "DependsOn": "SGGenerated80"
-    }, 
-    "SGGenerated80Rule16": {
-      "Type": "AWS::EC2::SecurityGroupIngress", 
-      "Properties": {
-        "ToPort": "80", 
-        "IpProtocol": "tcp", 
-        "CidrIpv6": "2405:8100::/32", 
-        "GroupId": {
-          "Fn::GetAtt": [
-            "SGGenerated80", 
-            "GroupId"
-          ]
-        }, 
-        "FromPort": "80"
-      }, 
-      "DependsOn": "SGGenerated80"
-    }, 
-    "SGGenerated80Rule15": {
-      "Type": "AWS::EC2::SecurityGroupIngress", 
-      "Properties": {
-        "ToPort": "80", 
-        "IpProtocol": "tcp", 
-        "CidrIpv6": "2400:cb00::/32", 
-        "GroupId": {
-          "Fn::GetAtt": [
-            "SGGenerated80", 
-            "GroupId"
-          ]
-        }, 
-        "FromPort": "80"
-      }, 
-      "DependsOn": "SGGenerated80"
-    }, 
-    "SGGenerated80Rule18": {
-      "Type": "AWS::EC2::SecurityGroupIngress", 
-      "Properties": {
-        "ToPort": "80", 
-        "IpProtocol": "tcp", 
-        "CidrIpv6": "2606:4700::/32", 
-        "GroupId": {
-          "Fn::GetAtt": [
-            "SGGenerated80", 
-            "GroupId"
-          ]
-        }, 
-        "FromPort": "80"
-      }, 
-      "DependsOn": "SGGenerated80"
-    }, 
-    "SGGenerated80Rule13": {
-      "Type": "AWS::EC2::SecurityGroupIngress", 
-      "Properties": {
-        "ToPort": "80", 
-        "IpProtocol": "tcp", 
-        "CidrIp": "197.234.240.0/22", 
-        "GroupId": {
-          "Fn::GetAtt": [
-            "SGGenerated80", 
-            "GroupId"
-          ]
-        }, 
-        "FromPort": "80"
-      }, 
-      "DependsOn": "SGGenerated80"
-    }, 
-    "SGGenerated80Rule5": {
-      "Type": "AWS::EC2::SecurityGroupIngress", 
-      "Properties": {
-        "ToPort": "80", 
-        "IpProtocol": "tcp", 
-        "CidrIp": "108.162.192.0/18", 
-        "GroupId": {
-          "Fn::GetAtt": [
-            "SGGenerated80", 
-            "GroupId"
-          ]
-        }, 
-        "FromPort": "80"
-      }, 
-      "DependsOn": "SGGenerated80"
-    }, 
-    "SGGenerated80Rule11": {
-      "Type": "AWS::EC2::SecurityGroupIngress", 
-      "Properties": {
-        "ToPort": "80", 
-        "IpProtocol": "tcp", 
-        "CidrIp": "188.114.96.0/20", 
-        "GroupId": {
-          "Fn::GetAtt": [
-            "SGGenerated80", 
-            "GroupId"
-          ]
-        }, 
-        "FromPort": "80"
-      }, 
-      "DependsOn": "SGGenerated80"
-    }, 
-    "SGGenerated80Rule10": {
-      "Type": "AWS::EC2::SecurityGroupIngress", 
-      "Properties": {
-        "ToPort": "80", 
-        "IpProtocol": "tcp", 
-        "CidrIp": "173.245.48.0/20", 
-        "GroupId": {
-          "Fn::GetAtt": [
-            "SGGenerated80", 
-            "GroupId"
-          ]
-        }, 
-        "FromPort": "80"
-      }, 
-      "DependsOn": "SGGenerated80"
-    }, 
-    "SGGenerated443Rule5": {
-      "Type": "AWS::EC2::SecurityGroupIngress", 
-      "Properties": {
-        "ToPort": "443", 
-        "IpProtocol": "tcp", 
-        "CidrIp": "108.162.192.0/18", 
-        "GroupId": {
-          "Fn::GetAtt": [
-            "SGGenerated443", 
-            "GroupId"
-          ]
-        }, 
-        "FromPort": "443"
-      }, 
-      "DependsOn": "SGGenerated443"
-    }, 
-    "SGGenerated443Rule4": {
-      "Type": "AWS::EC2::SecurityGroupIngress", 
-      "Properties": {
-        "ToPort": "443", 
-        "IpProtocol": "tcp", 
-        "CidrIp": "104.16.0.0/12", 
-        "GroupId": {
-          "Fn::GetAtt": [
-            "SGGenerated443", 
-            "GroupId"
-          ]
-        }, 
-        "FromPort": "443"
-      }, 
-      "DependsOn": "SGGenerated443"
-    }, 
-    "SGGenerated443Rule7": {
-      "Type": "AWS::EC2::SecurityGroupIngress", 
-      "Properties": {
-        "ToPort": "443", 
-        "IpProtocol": "tcp", 
-        "CidrIp": "141.101.64.0/18", 
-        "GroupId": {
-          "Fn::GetAtt": [
-            "SGGenerated443", 
-            "GroupId"
-          ]
-        }, 
-        "FromPort": "443"
-      }, 
-      "DependsOn": "SGGenerated443"
-    }, 
-    "SGGenerated80Rule4": {
-      "Type": "AWS::EC2::SecurityGroupIngress", 
-      "Properties": {
-        "ToPort": "80", 
-        "IpProtocol": "tcp", 
-        "CidrIp": "104.16.0.0/12", 
-        "GroupId": {
-          "Fn::GetAtt": [
-            "SGGenerated80", 
-            "GroupId"
-          ]
-        }, 
-        "FromPort": "80"
-      }, 
-      "DependsOn": "SGGenerated80"
-    }, 
-    "SGGenerated443Rule1": {
-      "Type": "AWS::EC2::SecurityGroupIngress", 
-      "Properties": {
-        "ToPort": "443", 
-        "IpProtocol": "tcp", 
-        "CidrIp": "103.21.244.0/22", 
-        "GroupId": {
-          "Fn::GetAtt": [
-            "SGGenerated443", 
-            "GroupId"
-          ]
-        }, 
-        "FromPort": "443"
-      }, 
-      "DependsOn": "SGGenerated443"
-    }, 
-    "SGGenerated443Rule3": {
-      "Type": "AWS::EC2::SecurityGroupIngress", 
-      "Properties": {
-        "ToPort": "443", 
-        "IpProtocol": "tcp", 
-        "CidrIp": "103.31.4.0/22", 
-        "GroupId": {
-          "Fn::GetAtt": [
-            "SGGenerated443", 
-            "GroupId"
-          ]
-        }, 
-        "FromPort": "443"
-      }, 
-      "DependsOn": "SGGenerated443"
-    }, 
-    "SGGenerated443Rule2": {
-      "Type": "AWS::EC2::SecurityGroupIngress", 
-      "Properties": {
-        "ToPort": "443", 
-        "IpProtocol": "tcp", 
-        "CidrIp": "103.22.200.0/22", 
-        "GroupId": {
-          "Fn::GetAtt": [
-            "SGGenerated443", 
-            "GroupId"
-          ]
-        }, 
-        "FromPort": "443"
-      }, 
-      "DependsOn": "SGGenerated443"
-    }, 
-    "SGGenerated443Rule15": {
-      "Type": "AWS::EC2::SecurityGroupIngress", 
-      "Properties": {
-        "ToPort": "443", 
-        "IpProtocol": "tcp", 
-        "CidrIpv6": "2400:cb00::/32", 
-        "GroupId": {
-          "Fn::GetAtt": [
-            "SGGenerated443", 
-            "GroupId"
-          ]
-        }, 
-        "FromPort": "443"
-      }, 
-      "DependsOn": "SGGenerated443"
-    }, 
-    "SGGenerated443Rule9": {
-      "Type": "AWS::EC2::SecurityGroupIngress", 
-      "Properties": {
-        "ToPort": "443", 
-        "IpProtocol": "tcp", 
-        "CidrIp": "172.64.0.0/13", 
-        "GroupId": {
-          "Fn::GetAtt": [
-            "SGGenerated443", 
-            "GroupId"
-          ]
-        }, 
-        "FromPort": "443"
-      }, 
-      "DependsOn": "SGGenerated443"
-    }, 
-    "SGGenerated443Rule8": {
-      "Type": "AWS::EC2::SecurityGroupIngress", 
-      "Properties": {
-        "ToPort": "443", 
-        "IpProtocol": "tcp", 
-        "CidrIp": "162.158.0.0/15", 
-        "GroupId": {
-          "Fn::GetAtt": [
-            "SGGenerated443", 
-            "GroupId"
-          ]
-        }, 
-        "FromPort": "443"
-      }, 
-      "DependsOn": "SGGenerated443"
-    }, 
-    "SGGenerated443Rule14": {
-      "Type": "AWS::EC2::SecurityGroupIngress", 
-      "Properties": {
-        "ToPort": "443", 
-        "IpProtocol": "tcp", 
-        "CidrIp": "198.41.128.0/17", 
-        "GroupId": {
-          "Fn::GetAtt": [
-            "SGGenerated443", 
-            "GroupId"
-          ]
-        }, 
-        "FromPort": "443"
-      }, 
-      "DependsOn": "SGGenerated443"
-    }
-  }, 
+  },
   "Metadata": {
-    "Feed Source": "CloudFlare", 
-    "BuiltOn": "2019-05-28T10:28:35.600478", 
-    "Author": "janhert", 
-    "Feed Checksum": "227e465a1db261a2bd00366dc7d6f3be", 
-    "Version": "1", 
-    "Feed Size": 21
+    "Author": "janhert",
+    "Version": "1",
+    "BuiltOn": "2021-05-24T20:59:57.287791",
+    "Feed Source": "CloudFlare",
+    "Feed Size": 22,
+    "Feed Checksum": "9e77073ed373a3cba4a7e288546eabc0"
   }
 }

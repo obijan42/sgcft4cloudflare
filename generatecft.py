@@ -92,6 +92,21 @@ def getIPAddressFeed(url):
     return response
 
 
+def create_bucket_policy(iplist, bucketname='$BUCKETNAME'):
+    return {
+        "Version": "2012-10-17", "Statement": [{
+            "Sid": "AllowCDN", "Effect": "Allow", "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": f"arn:aws:s3:::{bucketname}/*",
+            "Condition": {"IpAddress": {"aws:SourceIp": iplist}}
+        }]}
+
+
+def write_codes(payload, filen):
+    with open(filen, 'w') as outfile:
+        json.dump(payload, outfile, indent=2)
+
+
 # ----------------------------------------------------------------------
 
 
@@ -114,7 +129,7 @@ def main(argv):
 
     # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html
 
-    feedHash = hashlib.md5(str(iplist)).hexdigest()
+    feedHash = hashlib.md5(str(iplist).encode('utf-8')).hexdigest()
     feedLen = len(iplist)
 
     logging.info("Info Hash: {} , {} items ".format(feedHash, feedLen))
@@ -129,18 +144,17 @@ def main(argv):
         "Author": os.environ.get('USER', os.environ.get('USERNAME', 'Unknown')),
         "Version": "1",
         "BuiltOn": datetime.datetime.now().isoformat(),
-        "Feed Source" : "CloudFlare",
-        "Feed Size" : feedLen,
-        "Feed Checksum" : feedHash
+        "Feed Source": "CloudFlare",
+        "Feed Size": feedLen,
+        "Feed Checksum": feedHash
     })
 
     # logging.debug(json.dumps(templateObj, indent=4))
     if (templateObj):
         destFile = sys.path[0] + '/SecGroupCloudflare.template'
         logging.info("Writing to " + destFile)
-        with open(destFile, 'w') as f:
-            f.writelines(json.dumps(templateObj, sort_keys=False, indent=2))
-            f.close()
+        write_codes(templateObj, destFile)
+    write_codes(create_bucket_policy(iplist), 'BucketPolicyExample.json')
 
 
 if __name__ == '__main__':
